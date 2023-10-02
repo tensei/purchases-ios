@@ -14,12 +14,13 @@ Pod::Spec.new do |s|
   s.documentation_url = "https://docs.revenuecat.com/"
 
   s.framework      = 'StoreKit'
-  s.swift_version       = '5.5'
+  s.swift_version       = '5.7'
 
   s.ios.deployment_target = '11.0'
   s.watchos.deployment_target = '6.2'
   s.tvos.deployment_target = '11.0'
   s.osx.deployment_target = '10.13'
+  s.visionos.deployment_target = '1.0'
   
   s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES' }
 
