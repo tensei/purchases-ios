@@ -238,6 +238,13 @@ platform :ios do
 
   desc "visionOS build"
   lane :build_visionos do |options|
+    pod_lib_lint(
+      verbose: true,
+      podspec:'RevenueCat.podspec', 
+      platforms:"visionos",
+      fail_fast: true
+    )
+
     xcodebuild(
       workspace: 'RevenueCat.xcworkspace',
       scheme: 'RevenueCat',
@@ -945,7 +952,7 @@ lane :check_pods do
   pod_lib_lint(
     verbose: true,
     podspec:'RevenueCat.podspec', 
-    platforms:"ios,osx,tvos,watchos,visionos",
+    platforms:"ios,osx,tvos,watchos",
     fail_fast: true
   )
 end
